@@ -1,5 +1,6 @@
 <template>
-  <div class="email-list">
+  <div v-if="emailList.length == 10" class="email-list">
+    <h1>Ecco qui una lista di 10 indirizzi mail casuali</h1>
     <ul>
       <li v-for="(element, index) in emailList" :key="index">
         {{ element }}
@@ -35,5 +36,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
+li{
+  list-style: none;
+  padding-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 </style>
